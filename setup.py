@@ -72,7 +72,7 @@ class pre_build(build_ext):
                     "--prefix", hdf5_dir,
                     "--enable-shared=no",
                     "--with-pic=yes",
-                    "--build=aarch64"
+                    "--build=arm64"
             ])
 
             subprocess.check_call(["make"])
