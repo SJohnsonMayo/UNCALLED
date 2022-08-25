@@ -3,7 +3,7 @@
 	url = https://github.com/mateidavid/fast5.git
 [submodule "bwa"]
 	path = submods/bwa
-	url = https://github.com/SJohnsonMayo/bwa
+	url = https://github.com/SJohnsonMayo/bwa/
 [submodule "pdqsort"]
 	path = submods/pdqsort
 	url = https://github.com/orlp/pdqsort
