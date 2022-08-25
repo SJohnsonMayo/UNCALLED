@@ -53,7 +53,7 @@ class pre_build(build_ext):
                 "make", 
                  "-C", "./submods/bwa", 
                  "-f", "../../src/Makefile_bwa",
-                 "all CFLAGS=\"-g -Wall -Wno-unused-function -O3 -mtune-native\""
+                 "all", "CFLAGS=\"-g -Wall -Wno-unused-function -O3 -mtune-native\""
             ])
 
         if os.path.exists("./submods/hdf5/lib/libhdf5.a"):
