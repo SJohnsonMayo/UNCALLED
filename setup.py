@@ -48,13 +48,14 @@ class pre_build(build_ext):
             sys.stderr.write("Found libbwa.a\n")
         else:
             sys.stderr.write("building libbwa\n")
-
+            myenv = dict(os.environ)
+            myenv["CFLAGS"] = "-g -Wall -Wno-unused-function -O3 -mtune-native" 
             subprocess.check_call([
                 "make", 
                  "-C", "./submods/bwa", 
                  "-f", "../../src/Makefile_bwa",
-                 "all", "CFLAGS=\"-g -Wall -Wno-unused-function -O3 -mtune-native\""
-            ])
+                 "all"
+            ], env=myenv)
 
         if os.path.exists("./submods/hdf5/lib/libhdf5.a"):
             sys.stderr.write("Found libhdf5.a\n")
